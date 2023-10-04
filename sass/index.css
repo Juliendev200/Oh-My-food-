@@ -11,6 +11,7 @@
   --green-color: #99e2d0;
   --grey-filter:#eaeaea;
   --grey-darker:#353535;
+  --light-grey-background:#f6f6f6;
 }
 
 a {
@@ -23,7 +24,7 @@ a {
   align-items: center;
   box-sizing: border-box;
 }
-.header .logocontainer {
+.header .header__logocontainer {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -33,7 +34,7 @@ a {
   padding-bottom: 13px;
   gap: calc(0.5 * (100% - 162px) - 47px);
 }
-.header .previously {
+.header .header__logocontainer--previously {
   display: flex;
   height: 30px;
   width: 30px;
@@ -41,13 +42,13 @@ a {
   justify-content: center;
   text-decoration: none;
 }
-.header .logo {
+.header .header__logocontainer--logo {
   width: 162px;
   height: 36px;
   align-items: center;
   padding-right: calc(0.5 * (100% - 162px));
 }
-.header .localisation {
+.header .header__localisation {
   display: flex;
   width: 100%;
   gap: 17px;
@@ -58,22 +59,97 @@ a {
   padding: 15px;
 }
 
-.intro {
+.firstpart {
+  display: flex;
+  flex-direction: column;
+}
+.firstpart .firstpart__intro {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--light-grey-background);
+  padding-top: 39px;
+  padding-bottom: 57px;
 }
-.intro h1 {
+.firstpart .firstpart__intro h2 {
   display: flex;
   width: 275px;
   height: 68px;
   align-items: center;
   text-align: center;
 }
-.intro p {
+.firstpart .firstpart__intro p {
   display: flex;
   width: 315px;
   height: 46px;
   align-items: center;
   text-align: center;
+  font-size: 1.125em;
+  font-weight: 300;
+  color: var(--grey-darker);
+}
+.firstpart .firstpart__intro .firstpart__intro--button {
+  height: 50px;
+  padding: 0px 18.75px;
+  margin-top: 27px;
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356dc -11.44%, #FF79DA 123.93%));
+  color: white;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.firstpart .firstpart__fonctionnement {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 20px 68px 20px;
+  gap: 26px;
+}
+.firstpart .firstpart__fonctionnement h2 {
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+}
+.firstpart .firstpart__fonctionnement ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  list-style-type: none;
+}
+.firstpart .firstpart__fonctionnement ul li {
+  display: flex;
+  width: 322px;
+  height: 72px;
+  gap: 27px;
+  text-align: center;
+  counter-increment: list;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.firstpart .firstpart__fonctionnement ul li::before {
+  display: flex;
+  content: counter(list);
+  border-radius: 50%;
+  background-color: var(--purple-color);
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 26.86px;
+  margin-left: -7px;
+  z-index: 1;
+  position: absolute;
+}
+.firstpart .firstpart__fonctionnement ul .firstpart__fonctionnement--etape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=index.css.map */
