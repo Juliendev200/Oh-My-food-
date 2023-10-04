@@ -1,0 +1,79 @@
+/****** General ***********/
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --purple-color: #9356dc;
+  --pink-color: #ff79da;
+  --green-color: #99e2d0;
+  --grey-filter:#eaeaea;
+  --grey-darker:#353535;
+}
+
+a {
+  color: var(--grey-darker);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.header .logocontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 14px;
+  padding-bottom: 13px;
+  gap: calc(0.5 * (100% - 162px) - 47px);
+}
+.header .previously {
+  display: flex;
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.header .logo {
+  width: 162px;
+  height: 36px;
+  align-items: center;
+  padding-right: calc(0.5 * (100% - 162px));
+}
+.header .localisation {
+  display: flex;
+  width: 100%;
+  gap: 17px;
+  color: var(--grey-darker);
+  background-color: var(--grey-filter);
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.intro h1 {
+  display: flex;
+  width: 275px;
+  height: 68px;
+  align-items: center;
+  text-align: center;
+}
+.intro p {
+  display: flex;
+  width: 315px;
+  height: 46px;
+  align-items: center;
+  text-align: center;
+}/*# sourceMappingURL=index.css.map */
