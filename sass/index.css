@@ -3,6 +3,7 @@
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -12,10 +13,6 @@
   --grey-filter:#eaeaea;
   --grey-darker:#353535;
   --light-grey-background:#f6f6f6;
-}
-
-body {
-  box-sizing: border-box;
 }
 
 .header {
@@ -28,10 +25,10 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   padding-top: 14px;
   padding-bottom: 13px;
-  gap: calc(0.5 * (100% - 162px) - 47px);
+  position: relative;
 }
 .header .header__logocontainer--previously {
   display: flex;
@@ -41,12 +38,15 @@ body {
   justify-content: center;
   text-decoration: none;
   color: var(--grey-darker);
+  position: absolute;
+  left: 17px;
+  top: 14px;
 }
 .header .header__logocontainer--logo {
   width: 162px;
   height: 36px;
   align-items: center;
-  padding-right: calc(0.5 * (100% - 162px));
+  justify-content: center;
 }
 .header .header__localisation {
   display: flex;
