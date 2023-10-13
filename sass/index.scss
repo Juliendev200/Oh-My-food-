@@ -14,6 +14,7 @@
     --grey-filter:#eaeaea;
     --grey-darker:#353535;
     --light-grey-background:#f6f6f6;
+    --Button-Gradient: linear-gradient(193deg, #9356dc -11.44%, #FF79DA 123.93%);
 }
 
 
@@ -238,27 +239,42 @@
             border: 3px solid var(--light-grey-background);
             object-fit: cover;
         }
-        .restocontainer__card--content{
-            display: flex;
-            flex-direction: column;
-            padding: 16px 0px 12px 13px;
-            gap:5px;
-            position: relative;
-        }
     }
 }
 
 .restocontainer__card--content{
-    h3{
-        font-size: 18px;
-    }
-    p{
-        font-size: 17px;
-        font-weight: 300;
-    }
-    ins{
-        position: absolute;
-    }
+        display: flex;
+        flex-direction: column;
+        padding: 16px 0px 12px 13px;
+        gap:5px;
+        position: relative;
+        h3{
+            font-size: 18px;
+        }
+        p{
+            font-size: 17px;
+            font-weight: 300;
+        }
+        ins{
+            position: absolute;
+        }
+        i{
+            position:absolute;
+            right:25px;
+            top:50%;
+        }
+        .fa-solid{
+            opacity:0;
+            color: transparent;
+            background-image:var(--Button-Gradient);
+            scale:1.1;
+            background-clip: text;
+            -webkit-background-clip: text;
+            transition-duration: 1s;
+        }
+        .fa-solid:hover{
+            opacity:1;
+        }
 }
 
 .footer{
