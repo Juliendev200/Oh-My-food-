@@ -13,7 +13,7 @@
   --grey-filter:#eaeaea;
   --grey-darker:#353535;
   --light-grey-background:#f6f6f6;
-  --Button-Gradient: linear-gradient(193deg, #9356dc -11.44%, #FF79DA 123.93%);
+  --Button-Gradient: linear-gradient(to top, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
 .header {
@@ -130,11 +130,11 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  transition: transform 300ms;
 }
 .firstpart .firstpart__intro .firstpart__intro--button:hover {
-  border-radius: 25px;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  transform: scale(0.2);
+  opacity: 0.9;
 }
 .firstpart .firstpart__fonctionnement {
   display: flex;
