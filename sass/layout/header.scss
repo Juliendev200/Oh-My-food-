@@ -1,0 +1,46 @@
+@use "../utils/colors.scss";
+
+.header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    & .header__logocontainer{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-top: 14px;
+        padding-bottom: 13px;
+        position:relative;
+        & .header__logocontainer--previously {
+            display: flex;
+            height: 30px;
+            width: 30px;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color:colors.$grey-darker;
+            position: absolute;
+            left:17px;
+            top:14px;
+        }
+        & .header__logocontainer--logo {
+            width:162px;
+            height:36px;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    & .header__localisation{
+        display: flex;
+        width:100%;
+        gap: 17px;
+        color:var(--grey-darker);
+        background-color: colors.$grey;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+}
+
