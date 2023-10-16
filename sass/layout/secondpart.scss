@@ -1,0 +1,97 @@
+@use "../utils/colors.scss";
+
+.secondpart{
+    display: flex;
+    flex-direction: column;
+    background-color: colors.$light-grey-background;
+    padding-top: 54px;
+    padding-bottom: 66px;
+    gap:26px;
+    & h2{
+        display: flex;
+        justify-content: flex-start;
+        text-align: center;
+        padding-left:20px;
+    }
+}
+
+.width100center{
+    display: flex;
+    width:100%;
+    text-decoration: none;
+    color:black;
+    justify-content: center;
+}
+
+.restocontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    & .restocontainer__card{
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        background: #FFF;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+        width:calc(100% - 35px);
+    }
+    & .new{
+            position: relative;
+    }
+    & .new::before{
+            content:"Nouveau";
+            position: absolute;
+            right:21.62px;
+            top: 13px;
+            padding: 7px 10px;
+            border-radius: 2px;
+            background-color: colors.$green;
+            color: darken(colors.$green, 50%);
+            font-size: 14px;
+    }
+        & .restocontainer__card--img{
+            height: 231px;
+            width: calc(100% - 6px);
+            border-radius: 15px 15px 0px 0px;
+            border: 3px solid colors.$light-grey-background;
+            object-fit: cover;
+    }
+}
+
+
+.restocontainer__card--content{
+        display: flex;
+        flex-direction: column;
+        padding: 16px 0px 12px 13px;
+        gap:5px;
+        position: relative;
+        & h3{
+            font-size: 18px;
+        }
+        & p{
+            font-size: 17px;
+            font-weight: 300;
+        }
+        & ins{
+            position: absolute;
+        }
+        & i{
+            position:absolute;
+            right:25px;
+            top:50%;
+        }
+        & .fa-solid{
+            opacity:0;
+            color: transparent;
+            background-image: colors.$Button-Gradient;
+            scale:1.1;
+            background-clip: text;
+            -webkit-background-clip: text;
+            transition-duration: 1s;
+        }
+        & .fa-solid:hover{
+            opacity:1;
+        }
+}

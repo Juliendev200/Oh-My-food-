@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 25px;
+  gap: 16px;
+  background-color: #353535;
+}
+.footer i {
+  width: 16px;
+}
+.footer__logo {
+  height: 27px;
+  width: 99px;
+  filter: invert(100%);
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  list-style: none;
+}
+.footer__container .footer__container--option {
+  display: flex;
+  gap: 10px;
+}/*# sourceMappingURL=footer.css.map */
