@@ -51,12 +51,16 @@
             color: darken(colors.$green, 50%);
             font-size: 14px;
     }
-        & .restocontainer__card--img{
+    & .restocontainer__card--img{
             height: 231px;
-            width: calc(100% - 6px);
             border-radius: 15px 15px 0px 0px;
             border: 3px solid colors.$light-grey-background;
-            object-fit: cover;
+            background-size: cover;
+    }
+    @for $i from 1 through 4{
+        & .restocontainer__card--img_#{$i} {
+            background-image: url("../restaurants/resto#{$i}.jpg");
+        }
     }
 }
 

@@ -52,11 +52,21 @@
 }
 .restocontainer .restocontainer__card--img {
   height: 231px;
-  width: calc(100% - 6px);
   border-radius: 15px 15px 0px 0px;
   border: 3px solid #f6f6f6;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-size: cover;
+}
+.restocontainer .restocontainer__card--img_1 {
+  background-image: url("../restaurants/resto1.jpg");
+}
+.restocontainer .restocontainer__card--img_2 {
+  background-image: url("../restaurants/resto2.jpg");
+}
+.restocontainer .restocontainer__card--img_3 {
+  background-image: url("../restaurants/resto3.jpg");
+}
+.restocontainer .restocontainer__card--img_4 {
+  background-image: url("../restaurants/resto4.jpg");
 }
 
 .restocontainer__card--content {
