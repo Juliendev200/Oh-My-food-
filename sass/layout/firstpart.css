@@ -1,0 +1,110 @@
+.firstpart {
+  display: flex;
+  flex-direction: column;
+}
+.firstpart .firstpart__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding-top: 39px;
+  padding-bottom: 57px;
+}
+.firstpart .firstpart__intro h2 {
+  display: flex;
+  width: 275px;
+  height: 68px;
+  align-items: center;
+  text-align: center;
+}
+.firstpart .firstpart__intro p {
+  display: flex;
+  width: 315px;
+  height: 46px;
+  align-items: center;
+  text-align: center;
+  font-size: 1.125em;
+  font-weight: 300;
+  color: #353535;
+}
+.firstpart .firstpart__intro .firstpart__intro--button {
+  height: 50px;
+  padding: 0px 18.75px;
+  margin-top: 27px;
+  background: linear-gradient(193deg, #9356dc -11.44%, #FF79DA 123.93%);
+  color: white;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.firstpart .firstpart__intro .firstpart__intro--button:hover {
+  border-radius: 25px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+}
+.firstpart .firstpart__fonctionnement {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 20px 68px 20px;
+  gap: 26px;
+}
+.firstpart .firstpart__fonctionnement h2 {
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+}
+.firstpart .firstpart__fonctionnement ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  list-style-type: none;
+}
+.firstpart .firstpart__fonctionnement ul li {
+  display: flex;
+  width: 322px;
+  height: 72px;
+  gap: 27px;
+  text-align: center;
+  counter-increment: list;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+.firstpart .firstpart__fonctionnement ul li::before {
+  display: flex;
+  content: counter(list);
+  border-radius: 50%;
+  background-color: #9356dc;
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 26.86px;
+  margin-left: -14px;
+  z-index: 1;
+  position: absolute;
+}
+
+.firstpart__fonctionnement--etape {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 22px;
+  gap: 27px;
+  width: 100%;
+}
+.firstpart__fonctionnement--etape .fa-mobile-screen-button, .firstpart__fonctionnement--etape .fa-list {
+  color: #353535;
+}
+.firstpart__fonctionnement--etape .fa-store {
+  color: #9356dc;
+}/*# sourceMappingURL=firstpart.css.map */
