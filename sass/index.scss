@@ -4,6 +4,7 @@
     font-family: 'Roboto', sans-serif;
     margin:0;
     padding:0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -13,11 +14,9 @@
     --grey-filter:#eaeaea;
     --grey-darker:#353535;
     --light-grey-background:#f6f6f6;
+    --Button-Gradient: linear-gradient(193deg, #9356dc -11.44%, #FF79DA 123.93%);
 }
 
-body{
-    box-sizing: border-box;
-}
 
 .header{
     display:flex;
@@ -28,10 +27,10 @@ body{
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: center;
         padding-top: 14px;
         padding-bottom: 13px;
-        gap:calc((1/2) * (100% - (162px)) - 47px);
+        position:relative;
     }
         .header__logocontainer--previously {
             display: flex;
@@ -41,12 +40,15 @@ body{
             justify-content: center;
             text-decoration: none;
             color:var(--grey-darker);
+            position: absolute;
+            left:17px;
+            top:14px;
         }
         .header__logocontainer--logo {
             width:162px;
             height:36px;
             align-items: center;
-            padding-right: calc((1/2)* (100% - 162px));
+            justify-content: center;
         }
     .header__localisation{
         display: flex;
@@ -237,27 +239,42 @@ body{
             border: 3px solid var(--light-grey-background);
             object-fit: cover;
         }
-        .restocontainer__card--content{
-            display: flex;
-            flex-direction: column;
-            padding: 16px 0px 12px 13px;
-            gap:5px;
-            position: relative;
-        }
     }
 }
 
 .restocontainer__card--content{
-    h3{
-        font-size: 18px;
-    }
-    p{
-        font-size: 17px;
-        font-weight: 300;
-    }
-    ins{
-        position: absolute;
-    }
+        display: flex;
+        flex-direction: column;
+        padding: 16px 0px 12px 13px;
+        gap:5px;
+        position: relative;
+        h3{
+            font-size: 18px;
+        }
+        p{
+            font-size: 17px;
+            font-weight: 300;
+        }
+        ins{
+            position: absolute;
+        }
+        i{
+            position:absolute;
+            right:25px;
+            top:50%;
+        }
+        .fa-solid{
+            opacity:0;
+            color: transparent;
+            background-image:var(--Button-Gradient);
+            scale:1.1;
+            background-clip: text;
+            -webkit-background-clip: text;
+            transition-duration: 1s;
+        }
+        .fa-solid:hover{
+            opacity:1;
+        }
 }
 
 .footer{
