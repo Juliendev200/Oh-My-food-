@@ -16,7 +16,7 @@
     "url": "https://github.com/Juliendev200/Oh-My-food-/issues"
   },
   "homepage": "https://github.com/Juliendev200/Oh-My-food-#readme",
-  "dependencies": {
+  "devDependencies": {
     "sass": "^1.69.3"
   }
 }
