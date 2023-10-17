@@ -1,0 +1,29 @@
+@use "../utils/colors.scss";
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    padding: 22px 25px;
+    gap:16px;
+    background-color: colors.$grey-darker;
+    & i{
+        width: 16px;
+    }
+    &__logo{
+        height:27px;
+        width:99px; 
+        filter:invert(100%);
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        color:white;
+        font-size: 16px;
+        font-weight: 500;
+        list-style: none;
+        .footer__container--option{
+            display:flex;
+            gap:10px;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "oh-my-food",
+  "version": "1.0.0",
+  "description": "OpenclassroomProjet4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juliendev200/Oh-My-food-.git"
+  },
+  "author": "Juliendev200",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Juliendev200/Oh-My-food-/issues"
+  },
+  "homepage": "https://github.com/Juliendev200/Oh-My-food-#readme",
+  "devDependencies": {
+    "sass": "^1.69.3"
+  }
+}

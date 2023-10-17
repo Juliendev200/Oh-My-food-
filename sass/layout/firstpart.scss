@@ -1,0 +1,117 @@
+@use "../utils/colors.scss";
+@use "../utils/mixins.scss";
+
+.firstpart{
+    display: flex;
+    flex-direction: column;
+    & .firstpart__intro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: colors.$light-grey-background;
+        padding-top:39px;
+        padding-bottom: 57px;
+        & h2{
+            display: flex;
+            width:275px;
+            height:68px;
+            align-items: center;
+            text-align: center;
+        }
+        & p{
+            display: flex;
+            width:315px;
+            height:46px;
+            align-items: center;
+            text-align: center;
+            font-size: 1.125em;
+            font-weight: 300;
+           color: colors.$grey-darker;
+        }
+        & .firstpart__intro--button{
+            height:50px;
+            padding: 0px 18.75px;
+            margin-top: 27px;
+            color:white;
+            border-radius: 25px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition:transform 300ms;
+            @include mixins.shadow;
+            @include mixins.linearGradient;
+        }
+        & .firstpart__intro--button:hover{
+            transform: scale(1.05);
+            opacity:0.9;
+        }
+    }
+    & .firstpart__fonctionnement{
+        display: flex;
+        flex-direction: column;
+        padding: 48px 20px 68px 20px;
+        gap:26px;
+        & h2{
+            display: flex;
+            justify-content: flex-start;
+            text-align: center;
+        }
+        & ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap:25px;
+            list-style-type: none;
+            & li{
+                display:flex;
+                width:322px;
+                height: 72px;;
+                gap:27px;
+                text-align: center;
+                counter-increment: list;
+                border-radius: 20px;
+                position: relative;
+                @include mixins.shadow;
+            }
+            & li::before{
+                display: flex;
+                content: counter(list);
+                border-radius: 50%;
+                background-color: colors.$purple;
+                font-size: 14px;
+                color: white;
+                font-weight: 500;
+                width: 24px;
+                height: 24px;
+                justify-content: center;
+                align-items: center;
+                margin-top: 26.86px;
+                margin-left: -14px;
+                z-index: 1;
+                position: absolute;
+            }
+        }
+    }
+}
+
+.firstpart__fonctionnement--etape {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 22px;
+    gap:27px;
+    width:100%;
+    & .fa-mobile-screen-button, & .fa-list{
+          color: colors.$grey-darker
+        }
+    & .fa-store{
+            color: colors.$purple;
+          }
+  }
+  
+  
+  
+  

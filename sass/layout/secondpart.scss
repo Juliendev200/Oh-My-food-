@@ -1,0 +1,110 @@
+@use "../utils/colors.scss";
+@use "../utils/mixins.scss";
+
+.secondpart{
+    display: flex;
+    flex-direction: column;
+    background-color: colors.$light-grey-background;
+    padding-top: 54px;
+    padding-bottom: 66px;
+    gap:26px;
+    & h2{
+        display: flex;
+        justify-content: flex-start;
+        text-align: center;
+        padding-left:20px;
+    }
+}
+
+.width100center{
+    display: flex;
+    width:100%;
+    text-decoration: none;
+    color:black;
+    justify-content: center;
+}
+
+.restocontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    &__card{
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        background: #FFF;
+        width:calc(100% - 35px);
+        @include mixins.shadow;
+    }
+    & .new{
+            position: relative;
+    }
+    & .new::before{
+            content:"Nouveau";
+            position: absolute;
+            right:21.62px;
+            top: 13px;
+            padding: 7px 10px;
+            border-radius: 2px;
+            background-color: colors.$green;
+            color: darken(colors.$green, 50%);
+            font-size: 14px;
+    }
+    &__card--img{
+            height: 231px;
+            border-radius: 15px 15px 0px 0px;
+            border: 3px solid colors.$light-grey-background;
+            background-size: cover;
+    }
+    @for $i from 1 through 4{
+        & .restocontainer__card--img_#{$i} {
+            background-image: url("../restaurants/resto#{$i}.jpg");
+        }
+    }
+}
+
+
+.restocontainer__card--content{
+        display: flex;
+        flex-direction: column;
+        padding: 16px 0px 12px 13px;
+        gap:5px;
+        position: relative;
+        & h3{
+            font-size: 18px;
+        }
+        & p{
+            font-size: 17px;
+            font-weight: 300;
+        }
+        & i{
+            position:absolute;
+            right:25px;
+            top:50%;
+        }
+        & .fa-solid{
+            opacity:0;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            transition-duration: 1s;
+            @include mixins.linearGradient;
+            @include mixins.minizoom;
+        }
+        & .fa-solid:active{
+            transform: opacity: 1;
+            animation-name: like;
+            animation-duration:1s;
+        }
+}
+
+@keyframes like{
+    0%{
+        transform: opacity: 0;
+    }
+    100%{
+        transform: opacity:1;
+    }
+}
