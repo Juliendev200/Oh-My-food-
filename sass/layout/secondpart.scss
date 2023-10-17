@@ -93,18 +93,7 @@
             @include mixins.linearGradient;
             @include mixins.minizoom;
         }
-        & .fa-solid:active{
-            transform: opacity: 1;
-            animation-name: like;
-            animation-duration:1s;
+        & .fa-solid:hover{
+            opacity:1;
         }
-}
-
-@keyframes like{
-    0%{
-        transform: opacity: 0;
     }
-    100%{
-        transform: opacity:1;
-    }
-}
