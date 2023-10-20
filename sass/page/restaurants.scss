@@ -1,0 +1,87 @@
+@use "../utils/colors.scss";
+@use "../utils/mixins.scss";
+
+header img{
+    display: block;
+    width: 100%;
+    height:44vh;
+    object-fit: cover;
+}
+
+.main-resto{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    background: colors.$light-grey-background;
+    & h2{
+        font-family: 'shrikhand', sans-serif;
+        position: relative;
+        width:100%;
+        padding: 32px 17px 0px 17px;
+        margin-top: -32px;
+        border-radius: 32px 32px 0 0;
+        background: colors.$light-grey-background;
+        & i{
+            position:absolute;
+            right:28px;
+            top:36.5px;
+        }
+        & .fa-solid{
+            opacity:0;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            transition-duration: 1s;
+            @include mixins.linearGradient;
+            @include mixins.minizoom;
+        }
+        & .fa-solid:hover{
+            opacity:1;
+        }
+    }
+}
+
+.menu {
+    display:flex;
+    flex-direction: column;
+    gap: 12px;
+    padding:13px;
+    & h3{
+        font-size: 1rem;
+        font-weight: 300;
+        position: relative;
+        padding-bottom: 12px;
+    }
+    & h3::before{
+        content:"";
+        position: absolute;
+        width:40px;
+        height:3px;
+        background-color: colors.$green;
+        top:29px;
+        }
+    &__choix{
+        display:flex;
+        flex-direction: row;
+        padding:15px;
+        gap:5px;
+        border-radius: 12px;
+        @include mixins.shadow;
+
+        &--plat{
+            h4{
+                font-size: 18px;
+                font-weight: 500;
+                padding-bottom: 5px;
+            }
+            p {
+                font-weight: 300;
+            }
+        }
+        &--prix{
+            margin-left: auto;
+            padding-top: 27px;
+            font-weight: 700;
+        }
+    }
+}
