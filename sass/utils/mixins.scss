@@ -9,3 +9,20 @@
 @mixin linearGradient {
     background-image: linear-gradient(#9356dc -11.44%, #FF79DA 123.93%);;
 }
+
+@mixin button-beauty {
+    height:50px;
+    padding: 0px 18.75px;
+    margin-top: 27px;
+    color:white;    
+    border-radius: 25px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition:transform 300ms;
+    max-width: 218px;
+    @include shadow;
+    @include linearGradient;
+}
