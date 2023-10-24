@@ -75,6 +75,23 @@
   gap: 10px;
 }
 
+@media (min-width: 1080px) {
+  .footer {
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 30px 25px;
+    gap: 16px;
+  }
+  .footer__logo {
+    height: 27px;
+    width: 138px;
+    filter: invert(100%);
+  }
+  .footer__container {
+    flex-direction: row;
+    gap: 7px;
+  }
+}
 .firstpart {
   display: flex;
   flex-direction: column;
