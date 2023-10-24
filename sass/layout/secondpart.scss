@@ -10,7 +10,6 @@
     gap:26px;
     & h2{
         display: flex;
-        justify-content: flex-start;
         text-align: center;
         padding-left:20px;
     }
@@ -68,33 +67,49 @@
 
 
 .restocontainer__card--content{
-        display: flex;
-        flex-direction: column;
-        padding: 16px 0px 12px 13px;
-        gap:5px;
-        position: relative;
-        & h3{
-            font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0px 12px 13px;
+    gap:5px;
+    position: relative;
+    & h3{
+        font-size: 18px;
+    }
+    & p{
+        font-size: 17px;
+        font-weight: 300;
+    }
+    & i{
+        position:absolute;
+        right:25px;
+        top:50%;
+    }
+    & .fa-solid{
+        opacity:0;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        transition-duration: 1s;
+        @include mixins.linearGradient;
+        @include mixins.minizoom;
+    }
+    & .fa-solid:hover{
+        opacity:1;
+    }
+}
+
+@media (min-width: 1080px) {
+    .restocontainer{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 50px 100px;
+        justify-content: flex-start;
+        &__card{
+            width:100%;
         }
-        & p{
-            font-size: 17px;
-            font-weight: 300;
-        }
-        & i{
-            position:absolute;
-            right:25px;
-            top:50%;
-        }
-        & .fa-solid{
-            opacity:0;
-            color: transparent;
-            background-clip: text;
-            -webkit-background-clip: text;
-            transition-duration: 1s;
-            @include mixins.linearGradient;
-            @include mixins.minizoom;
-        }
-        & .fa-solid:hover{
-            opacity:1;
+        .width100center{
+            width:calc(50% - 100px);
+            max-width:490px;
         }
     }
+}

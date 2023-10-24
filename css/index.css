@@ -132,8 +132,6 @@
 }
 .firstpart .firstpart__fonctionnement h2 {
   display: flex;
-  justify-content: flex-start;
-  text-align: center;
 }
 .firstpart .firstpart__fonctionnement ul {
   display: flex;
@@ -187,6 +185,12 @@
   color: #9356dc;
 }
 
+@media (min-width: 1080px) {
+  .firstpart ul {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+  }
+}
 .secondpart {
   display: flex;
   flex-direction: column;
@@ -197,7 +201,6 @@
 }
 .secondpart h2 {
   display: flex;
-  justify-content: flex-start;
   text-align: center;
   padding-left: 20px;
 }
@@ -291,6 +294,21 @@
   opacity: 1;
 }
 
+@media (min-width: 1080px) {
+  .restocontainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px 100px;
+    justify-content: flex-start;
+  }
+  .restocontainer__card {
+    width: 100%;
+  }
+  .restocontainer .width100center {
+    width: calc(50% - 100px);
+    max-width: 490px;
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -322,6 +340,14 @@
   z-index: 3;
 }
 
+@media (min-width: 1080px) {
+  .firstpart__fonctionnement, .secondpart {
+    padding-left: 180px !important;
+  }
+  h2 {
+    padding-left: 0px !important;
+  }
+}
 @keyframes showup {
   0% {
     transform: scale(0);

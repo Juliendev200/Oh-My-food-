@@ -8,7 +8,6 @@
 }
 .secondpart h2 {
   display: flex;
-  justify-content: flex-start;
   text-align: center;
   padding-left: 20px;
 }
@@ -100,4 +99,20 @@
 }
 .restocontainer__card--content .fa-solid:hover {
   opacity: 1;
+}
+
+@media (min-width: 1080px) {
+  .restocontainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px 100px;
+    justify-content: flex-start;
+  }
+  .restocontainer__card {
+    width: 100%;
+  }
+  .restocontainer .width100center {
+    width: calc(50% - 100px);
+    max-width: 490px;
+  }
 }
