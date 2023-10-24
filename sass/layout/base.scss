@@ -1,5 +1,6 @@
 /****** General ***********/
-
+@use "../utils/colors.scss";
+@use "../utils/mixins.scss";
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Manrope:wght@200;400&family=Montserrat&family=Roboto:ital,wght@1,100;1,400&family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Manrope:wght@200;400&family=Montserrat&family=Roboto:ital,wght@0,400;1,100;1,400&family=Shrikhand&display=swap');
 
@@ -10,12 +11,29 @@
     box-sizing: border-box;
 }
 
-:root {
-    --purple-color: #9356dc;
-    --pink-color: #ff79da;
-    --green-color: #99e2d0;
-    --grey-filter:#eaeaea;
-    --grey-darker:#353535;
-    --light-grey-background:#f6f6f6;
-    --Button-Gradient: linear-gradient(193deg, #9356dc -11.44%, #FF79DA 123.93%);
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    $loadertimer: 2s;
+    background-color: colors.$light-grey-background;
+    position: fixed;
+    height: 100vh;
+    inset: 0;
+    z-index:2;
+    opacity: 0.9;
+    animation: fader 0.5s $loadertimer both;
+    transform-origin: top;
+    &::after{
+        content:'';
+        width:50px;
+        height:50px;
+        border-top: solid 5px colors.$purple;
+        border-bottom:solid 5px colors.$pink;
+        border-radius: 50%;
+        animation: spin $loadertimer linear;
+        z-index:3;
+
+
+    }
 }

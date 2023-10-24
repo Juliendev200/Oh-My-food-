@@ -1,5 +1,6 @@
 @use "../utils/colors.scss";
 @use "../utils/mixins.scss";
+@use "../utils/animation.scss";
 
 header img{
     display: block;
@@ -61,6 +62,12 @@ header img{
         top:29px;
         }
     &__choix{
+        $nombreplatsmax:99;
+        @for $i from 1 through $nombreplatsmax {
+            &:nth-child(#{$i}) {
+                animation-delay: 100ms * $i;
+            }
+        }
         display:flex;
         flex-direction: row;
         padding:15px;
@@ -68,6 +75,8 @@ header img{
         border-radius: 12px;
         @include mixins.shadow;
         overflow: hidden;
+        animation: showup 1s;
+        animation-fill-mode: both;
         &--plat{
             h4{
                 font-size: 18px;
@@ -91,7 +100,7 @@ header img{
             border-radius: 0 12px 12px 0;
             width: 64px;
             margin: -15px -79px -15px 0px;
-            transition: all 0.5s;
+            transition: all 0.5s both;
             i{
                 display: flex;
                 align-items: center;
