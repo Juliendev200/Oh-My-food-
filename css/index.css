@@ -848,7 +848,7 @@ header img {
   .header img {
     height: 30vh;
   }
-  .main-container {
+  .main-container-resto {
     display: flex;
     flex-direction: column;
     justify-content: center;
