@@ -100,9 +100,20 @@
   
   @media (min-width: 1080px) {
     .firstpart {
+        &__fonctionnement{
+            justify-content: center;
+            align-items: center;
+            h2{
+                display: flex;
+                width: 1052px;
+                justify-content: flex-start;
+            }
+        }
         ul{
         flex-direction: row !important; 
-        justify-content: flex-start !important;
+        justify-content: center !important;
+        padding-left:14px;
+        gap:36px !important;
         }
   }
 }

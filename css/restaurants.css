@@ -35,6 +35,7 @@ header img {
   flex-direction: column;
   gap: 40px;
   background: #f6f6f6;
+  max-width: 1055px;
 }
 .main-resto h2 {
   font-family: "shrikhand", sans-serif;
@@ -44,6 +45,7 @@ header img {
   margin-top: -32px;
   border-radius: 32px 32px 0 0;
   background: #f6f6f6;
+  max-width: 1055px;
 }
 .main-resto h2 i {
   position: absolute;
@@ -454,4 +456,46 @@ header img {
 .menu__order--button:hover {
   transform: scale(1.05);
   opacity: 0.9;
+}
+
+@media (min-width: 1080px) {
+  .header {
+    width: 100%;
+  }
+  .header img {
+    height: 30vh;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1055px;
+  }
+  .menu h3 {
+    display: flex;
+    width: 100%;
+    max-width: 634px;
+  }
+  .menu__choix {
+    width: 100%;
+    max-width: 634px;
+  }
+  .main-resto {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .main-resto h2 {
+    display: flex;
+    justify-content: center;
+  }
+  .main-resto h2 i {
+    right: 351px;
+  }
 }

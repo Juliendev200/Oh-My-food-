@@ -14,6 +14,7 @@ header img{
     flex-direction: column;
     gap:40px;
     background: colors.$light-grey-background;
+    max-width: 1055px;
     & h2{
         font-family: 'shrikhand', sans-serif;
         position: relative;
@@ -22,6 +23,7 @@ header img{
         margin-top: -32px;
         border-radius: 32px 32px 0 0;
         background: colors.$light-grey-background;
+        max-width: 1055px;
         & i{
             position:absolute;
             right:28px;
@@ -131,4 +133,46 @@ header img{
             opacity:0.9;
         }
     }
+}
+
+@media (min-width: 1080px) {
+.header{
+    width: 100%;
+    img{
+        height: 30vh;
+    }
+}
+.main-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1055px;;
+    h3{
+        display: flex;
+        width:100%;
+        max-width: 634px;
+    }
+    &__choix{
+        width:100%;
+        max-width: 634px;
+    }
+}
+.main-resto{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    h2{
+        display: flex;
+        justify-content: center;
+        i{
+            right:351px;
+        }
+    }
+}
 }

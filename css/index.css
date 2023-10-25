@@ -81,6 +81,7 @@
     align-items: center;
     padding: 30px 25px;
     gap: 16px;
+    width: 100%;
   }
   .footer__logo {
     height: 27px;
@@ -203,9 +204,20 @@
 }
 
 @media (min-width: 1080px) {
+  .firstpart__fonctionnement {
+    justify-content: center;
+    align-items: center;
+  }
+  .firstpart__fonctionnement h2 {
+    display: flex;
+    width: 1052px;
+    justify-content: flex-start;
+  }
   .firstpart ul {
     flex-direction: row !important;
-    justify-content: flex-start !important;
+    justify-content: center !important;
+    padding-left: 14px;
+    gap: 36px !important;
   }
 }
 .secondpart {
@@ -312,11 +324,23 @@
 }
 
 @media (min-width: 1080px) {
+  .secondpart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .secondpart h2 {
+    display: flex;
+    justify-content: flex-start;
+    width: 1052px;
+    padding: 0px;
+  }
   .restocontainer {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 50px 100px;
-    justify-content: flex-start;
+    justify-content: center;
+    width: 1152px;
   }
   .restocontainer__card {
     width: 100%;
@@ -357,14 +381,6 @@
   z-index: 3;
 }
 
-@media (min-width: 1080px) {
-  .firstpart__fonctionnement, .secondpart {
-    padding-left: 180px !important;
-  }
-  h2 {
-    padding-left: 0px !important;
-  }
-}
 @keyframes showup {
   0% {
     transform: scale(0);
@@ -402,6 +418,7 @@ header img {
   flex-direction: column;
   gap: 40px;
   background: #f6f6f6;
+  max-width: 1055px;
 }
 .main-resto h2 {
   font-family: "shrikhand", sans-serif;
@@ -411,6 +428,7 @@ header img {
   margin-top: -32px;
   border-radius: 32px 32px 0 0;
   background: #f6f6f6;
+  max-width: 1055px;
 }
 .main-resto h2 i {
   position: absolute;
@@ -821,4 +839,46 @@ header img {
 .menu__order--button:hover {
   transform: scale(1.05);
   opacity: 0.9;
+}
+
+@media (min-width: 1080px) {
+  .header {
+    width: 100%;
+  }
+  .header img {
+    height: 30vh;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1055px;
+  }
+  .menu h3 {
+    display: flex;
+    width: 100%;
+    max-width: 634px;
+  }
+  .menu__choix {
+    width: 100%;
+    max-width: 634px;
+  }
+  .main-resto {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .main-resto h2 {
+    display: flex;
+    justify-content: center;
+  }
+  .main-resto h2 i {
+    right: 351px;
+  }
 }

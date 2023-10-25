@@ -32,6 +32,7 @@
     align-items: center;
     padding: 30px 25px;
     gap: 16px;
+    width: 100%;
   }
   .footer__logo {
     height: 27px;
