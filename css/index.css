@@ -797,7 +797,7 @@ header img {
   border-radius: 0 12px 12px 0;
   width: 64px;
   margin: -15px -79px -15px 0px;
-  transition: all 0.5s both;
+  transition: margin-right 0.5s;
 }
 .menu__choix--check i {
   display: flex;
