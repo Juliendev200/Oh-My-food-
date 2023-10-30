@@ -69,10 +69,15 @@
   font-size: 16px;
   font-weight: 500;
   list-style: none;
+  text-decoration: none;
 }
 .footer__container .footer__container--option {
   display: flex;
   gap: 10px;
+}
+.footer__container .footer__container--option a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit;
 }
 
 @media (min-width: 1080px) {
