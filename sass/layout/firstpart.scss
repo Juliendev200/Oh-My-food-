@@ -30,10 +30,13 @@
         }
         & .firstpart__intro--button{
             @include mixins.button-beauty;
+            transition-duration: 1s;
         }
+
         & .firstpart__intro--button:hover{
             transform: scale(1.05);
             opacity:0.9;
+            @include mixins.shadower;
         }
     }
     & .firstpart__fonctionnement{

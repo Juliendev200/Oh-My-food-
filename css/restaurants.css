@@ -26,7 +26,7 @@
 header img {
   display: block;
   width: 100%;
-  height: 44vh;
+  height: 36vh;
   object-fit: cover;
 }
 
@@ -95,6 +95,7 @@ header img {
   overflow: hidden;
   animation: showup 1s;
   animation-fill-mode: both;
+  background-color: white;
 }
 .menu__choix:nth-child(1) {
   animation-delay: 100ms;
@@ -393,12 +394,21 @@ header img {
 .menu__choix:nth-child(99) {
   animation-delay: 9900ms;
 }
+.menu__choix--plat {
+  overflow: hidden;
+}
 .menu__choix--plat h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 18px;
   font-weight: 500;
   padding-bottom: 5px;
 }
 .menu__choix--plat p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-weight: 300;
 }
 .menu__choix--prix {
@@ -446,7 +456,7 @@ header img {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: transform 300ms;
+  transition-duration: 300ms;
   max-width: 218px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   background-image: linear-gradient(#9356dc -11.44%, #FF79DA 123.93%);
@@ -463,7 +473,7 @@ header img {
     width: 100%;
   }
   .header img {
-    height: 30vh;
+    height: 22vh;
   }
   .main-container-resto {
     display: flex;
